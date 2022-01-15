@@ -6,7 +6,7 @@
 			<div id="responsive-nav">
 				<!-- category nav -->
 				{% if page %}
-				<div class="category-nav">
+				<div class="category-nav show-on-click">
 					{% else %}
 					<div class="category-nav show-on-click">
 					{% endif %}
@@ -21,7 +21,7 @@
 									<div class="col-md-4">
 										{% if not node.is_leaf_node %}
 										<ul class="list-links">
-											<hr>
+<!--											<hr>-->
 											<li><a href="#">{{ children }}</a></li>
 
 										</ul>

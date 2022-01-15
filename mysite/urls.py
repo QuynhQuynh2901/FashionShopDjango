@@ -27,24 +27,24 @@ from user import views as UserViews
 urlpatterns = [
     path('', include('home.urls')),
     path('home/', include('home.urls')),
-    path('about/', views.about,name='aboutus'),
-    path('contact/', views.contactus,name='contactus'),
+    path('about/', views.about, name='aboutus'),
+    path('contact/', views.contactus, name='contactus'),
     path('product/', include('product.urls')),
     path('order/', include('order.urls')),
     path('user/', include('user.urls')),
-    path('search/', views.search,name='search'),
+    path('search/', views.search, name='search'),
     path('shopcart/', OrderViews.shopcart, name='shopcart'),
     path('login/', UserViews.login_form, name='login_form'),
     path('logout/', UserViews.logout_func, name='logout_func'),
     path('signup/', UserViews.signup_form, name='signup_form'),
     path('faq/', views.faq, name='faq'),
-    path('search_auto/', views.search_auto,name='search_auto'),
+    path('search_auto/', views.search_auto, name='search_auto'),
     path('admin/', admin.site.urls),
     path('', views.index, name='home'),
     path('ckeditor/', include('ckeditor_uploader.urls')),
-    path('category/<int:id>/<slug:slug>', views.category_products,name='category_products'),
+    path('category/<int:id>/<slug:slug>', views.category_products, name='category_products'),
     path('product/<int:id>/<slug:slug>/', views.product_detail, name='product_detail'),
     path('ajaxcolor/', views.ajaxcolor, name='ajaxcolor'),
 ]
 if settings.DEBUG:
-    urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
